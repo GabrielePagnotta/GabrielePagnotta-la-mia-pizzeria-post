@@ -4,13 +4,21 @@
     ViewData["Title"] = "La tua pizza";
     Layout = "~/Views/Shared/_NewLayout.cshtml";
 }
-<div style="border-radius:10px" class="w-50 m-auto bg-secondary text-white">
-    <div class="d-flex justify-content-center">
+<div class="background-img">
+<div style="z-index:0" class="overlay"></div>
+<div style="position:relative;border-radius:10px" class="text-white bg-dark text-center w-50 m-auto">
+    <h1>Dai sfogo all'immaginazione</h1>
+    <h3>Crea la tua pizza personalizzata. le migliori potranno essere inserite nel nostro menù!</h3>
+</div>
 
+<div style="border-radius:10px;z-index:1;position:relative" class="w-50 m-auto text-white">
+   
+    <div class="d-flex justify-content-center background-create">
+        
     
 <form asp-controller="Pizza" asp-action="Create" method="post">
     @Html.AntiForgeryToken()
-  <div class="mb-3 w-75 mx-5 mt-3">
+  <div style="z-index:1" class="mb-3 w-75 mx-5 mt-3">
     <label for="" class="form-label">Inserisci il nome:</label>
     <input asp-for="Name" class="form-control">
     <span class="text-danger" asp-validation-for="Name"></span>
@@ -38,5 +46,6 @@
   </div>
   
         </form>
+    </div>
     </div>
 </div>

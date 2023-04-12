@@ -25,6 +25,13 @@ body {
     width:100vw;
     z-index:0;
 }
+.background-create{
+    background-image: url("../Media/pizza_create.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:50px;
+    
+}
 
 .overlay{
     position:absolute;
